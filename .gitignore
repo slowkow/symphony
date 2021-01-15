@@ -6,3 +6,4 @@ src/.ipynb_checkpoints
 R/.RData
 R/.Rhistory
 .Rproj.user
+*.Rproj

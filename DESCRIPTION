@@ -24,7 +24,6 @@ LinkingTo:
 Imports: 
     methods,
     Rcpp,
-    harmony,
     uwot,
     irlba,
     class,
@@ -40,3 +39,4 @@ Imports:
     tidyr,
     rlang
 Remotes: github::immunogenomics/harmony
+Depends: harmony

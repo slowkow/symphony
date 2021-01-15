@@ -50,8 +50,10 @@ including variable gene selection, scaling, PCA, Harmony, and Symphony
 compression.
 
 ``` r
+library(symphony)
+
 # Build reference
-reference = symphony::buildReference(
+reference = buildReference(
     ref_exp,                 # reference genes by cells matrix
     ref_metadata,            # dataframe with cell metadata
     vars = c('donor'),       # variable(s) to integrate over
@@ -74,8 +76,10 @@ would like your code to be more modular and flexible.
 
 ``` r
 
+library(harmony)
+
 # Run Harmony to integrate the reference cells
-ref_harmObj = harmony::HarmonyMatrix(
+ref_harmObj = HarmonyMatrix(
         data_mat = t(Z_pca_ref),   # starting embedding (e.g. PCA, CCA) of cells
         meta_data = ref_metadata,  # dataframe with cell metadata
         theta = c(2),              # cluster diversity enforcement
@@ -95,6 +99,7 @@ reference = buildReferenceFromHarmonyObj(
         verbose = TRUE,         # display output?
         do_umap = TRUE,         # run UMAP and save UMAP model to file?
         save_uwot_path = '/absolute/path/uwot_model_1' # filepath to save UMAP model)
+)
 ```
 
 Note that `vargenes_means_sds` requires column names `c('symbol',
