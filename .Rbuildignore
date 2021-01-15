@@ -4,3 +4,6 @@
 ^R/\.ipynb_checkpoints$
 ^src/\.ipynb_checkpoints$
 ^vignettes/*$
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.github$
